@@ -1,0 +1,374 @@
+
+
+
+//-----------------------Advance JavaScript--------------------------------
+ 
+
+
+// var datatype 
+
+// var a = "Hello";               
+// var a = "Satish Singh";     // here we can Re_Declare in case of var keyword   
+// console.log(a);
+// a = "Amit Singh";      // here we can Re_Assign the value By using Var Variable
+// console.log(a);        // it will show result in console as  Amit Singh
+
+
+
+
+// let datatype 
+
+// let b = "Hello";
+ //let b = "Ameer";         // here we can't Re_Declare in case of let keyword
+// b = "Satish Singh";         //But  here we can Re_Assign the Value in case of let keyword
+// document.write(b);          // output is Satish Singh
+
+
+
+// const datatype 
+
+// const  c = "Hello";  
+// const c  = "Satish Singh";  // here we can't Re_Declare and Re_Assign the Value in case of Const keyword
+// c = "Ameer Singh";
+// console.log(c);
+
+
+// if (1 == 1) {
+//     var x = "Hello";
+// }
+// console.log(x);      // it is globle vriable it can be access anywhere 
+
+
+
+// if (1 == 1) {
+//     let y = "Hello"
+//     console.log(y);      // it is local vriable it can be access only inside the block
+// }
+// console.log(y);      // it is local vriable it can't be access anywhere
+
+
+// if (1 == 1) {
+//     let z = "Hello";
+//     console.log(z);      // it is local vriable it can be access only inside the block
+// }
+// console.log(z);      // it is local vriable it can't be access anywhere
+
+
+
+
+// for(let q = 1; q<=5; q++){
+//     document.write(q + "<br>");
+//     console.log(q); 
+// }                     // it is local vriable it can be access only inside the block
+
+
+
+
+
+
+
+
+
+
+// --------------Tamplate String Or Template Literal (it work as Concate Concate ) ------------------------------
+
+
+//Normal Concate Method
+// var user = "Satish";
+// var greet = "Hello " + user;
+//  console.log(greet);                 // Output is Hello Satish
+ 
+
+
+
+
+// Tamplate String -----------> it's Come in ES6 Version of JavaScript
+
+// var user = "Satish";
+// var greet = `Hello  ${user}`;    // `` it's called as Bactic cotes
+// console.log(greet);
+
+
+// let student = "Satish";
+// let marks = 90;
+// console.log(`Hello ${student} your Marks is : ${marks}`);  // output is Hello Satish your Marks is : 90
+
+
+
+// let student = "Satish";
+// let marks = 90;
+// let Student_Marks = `Hello ${student} your Marks is : ${marks}`;  // here we have put in a variable
+// console.log(Student_Marks);           // output is Hello Satish your Marks is : 90
+
+
+
+// let student = "Satish";
+// let marks = 90;
+// let Student_Marks = `Hello "${student}" your Marks is : ${marks}`;  // here i have given the cotes Also in ${Student} 
+// console.log(Student_Marks);  //output ---> Hello "Satish" your Marks is : 90
+
+
+
+
+// used in Function
+
+// let FirstName = "Satish";
+// let LastName  = "Singh";
+
+// function FullName(FirstName, LastName){
+//     return `${FirstName} ${LastName}`;
+// }
+
+// let FName = `Hello ${FullName(FirstName, LastName)}`;   // Calling Function FullName
+// console.log(FName);
+
+
+
+
+
+
+
+//----------------------Arrow Function in ES6 Version of JavaScript ----------------------------
+
+
+
+
+// Simple Function 
+// let welcome = function(){
+//     return "welcome to Squad Technology"; 
+// }
+// welcome()    // Calling the Finction
+
+// console.log(welcome());  // output ----> welcome to Squad Technology
+
+
+
+// Arrow Function ----> it Provides the Short form of the Function
+// let welcome = () => {
+//     return "welcome to Squad Technology"; 
+// }
+// welcome()    // Calling the Finction
+
+// console.log(welcome());  // output ----> welcome to Squad Technology
+
+
+
+
+
+//simple Function with Paramiter
+// let wecome = function(Name, Age){
+//     return `welcome to Squad Technology ${Name} Your Age is : ${Age}`;
+// }
+// let greeting = wecome("Satish Singh", 22);
+// console.log(greeting); // output --> welcome to Squad Technology Satish Singh Your Age is : 22
+
+
+//Arrow Function with Paramiter 
+// This Funtion is same as Above function  but it's Converted  in Arrow Function  in only single line 
+//  let welcome = (Name, Age) => `welcome to Squad Technology ${Name}  Your Age is : ${Age}`;
+//  console.log(welcome("Satish Singh", 22)); // output ---> welcome to Squad Technology Satish Singh  Your Age is : 22
+
+
+
+
+
+
+
+
+
+//----------------------------Object Literal ---> it Came in ES6 Version of JavaScript----------------------------------------
+// It Also Provides  the Sort form of Object
+
+
+// Simple  Created Object
+
+// let Name = "Satish";
+// let Course = "B-Tech";
+// var obj = {
+//     Name : Name,
+//     Course : Course
+// };
+//  console.log(obj);
+
+
+
+//------------Oblect Literal------------------------
+
+// let Name = "Satish";
+// let Course = "B-Tech";
+
+// var obj = {
+//     Name,
+//     Course
+// };
+//  console.log(obj);
+  
+
+ 
+
+//  let n = "Name";
+//  var obj = {
+//     [n] : "Satish Singh",
+//     Course : "B-Tech"
+//  };
+//  console.log(obj);              //output ---------> {Name: 'Satish Singh', Course: 'B-Tech'}
+//  console.log(obj.Name);        // output ----------> Satish Singh
+
+
+
+
+//  let n = "Student";
+//  var obj = {
+//     [n + "Name"] : "Satish Singh", // Here we have Concate the name in Student as Showing for [n + "Name"] ---> StudentName
+//     Course : "B-Tech"
+//  };
+//  console.log(obj);       //output --------->{StudentName: 'Satish Singh', Course: 'B-Tech'}
+            
+
+
+
+
+
+// used in function
+
+//  let n = "Student";
+//  var obj = {
+//     [n + "Name"] : "Satish Singh", 
+//     Course : "B-Tech",
+//     details : function(){
+//         return `${this.StudentName} is Student of ${this.Course}`  
+//     }
+//  };
+//  console.log(obj.details());  // calling Function details()   //output------>Satish Singh is Student of B-Tech
+  
+
+
+//  let n = "Student";
+//  var obj = {
+//     [n + "Name"] : "Satish Singh", 
+//     Course : "B-Tech",
+//     'details Show'(){
+//         return `${this.StudentName} is Student of ${this.Course}`  
+//     }
+//  };
+//  console.log(obj['details Show']()); // Another way  For Calling the Function
+
+
+
+
+
+// let Fname = "Satish";
+// let Lname = "Singh";
+// let  course = "B-ech";
+
+// function Student(FName, Lname, course){
+//     let FullName = FName + " " + Lname;                 // Concating
+//     return {FullName, course}
+// }
+
+// let s = Student(Fname, Lname, course);
+// console.log(s.FullName);                              // output ------> Satish Singh
+
+
+
+
+
+
+
+
+//-------------------Classes---------------------------------
+
+// class Hello{
+//     message(){                                       // Message ----> Methods or Function
+//         console.log("Hello Everyone")
+//     }
+// }
+// let a = new Hello();                                // new keyword for creating the object
+// a.message();   // Calling Function
+
+
+
+
+// Class with Multiple Funtion 
+
+// class Hello{
+//     message(){                                 // Message ----> Methods or Function
+//         console.log("Hello Everyone");
+//     }
+//     sorry(){                                      // sorry ----> Methods or Function
+//         console.log("Sorry Everyone");
+//     }
+// }
+// let a = new Hello();            // new keyword for creating the object
+// a.message();
+// a.sorry();
+
+
+
+
+
+//-----------------Type of Method in OOPS-----------------------------------
+
+//Contructor    
+// class student{
+//     constructor(){
+//         console.log("Hii Satish");
+
+//     }
+// }
+
+// let b = new student();   // when we create object this function will autometically call
+// let c = new student();   // when we create object this function will autometically call
+
+
+
+
+
+//Prototype Method
+
+// class student{
+//     constructor(name, age){                     // here function name is constructor
+//         this.studentname = name;
+//         this.studentage  = age;
+//         console.log("Hii Satish this is contructor function");
+//     }
+//     Hello(){
+//         console.log(`Hello ${this.studentname} your age is ${this.studentage}`);   // here this keyword reference to the name which defined in Consructor function
+//     }
+// }
+// let b = new student("Satish Singh", 22);   // when we create object this function will autometically call  OUTPUT ----->Hii Satish this is contructor function
+// let c = new student("Amit Singh", 25); //here we have created another object---> we can make multiple object inside the class
+//b.name = " Satish Singh "; 
+// b.Hello();  // Calling to second Fuction Hello() OUTPUT ---> Hello Satish Singh your age is 22 
+// c.Hello(); // calling to second object 
+
+
+
+
+// Static Method -------> in that method no need to create the object when we use static Method 
+
+// class student{
+//     constructor(name, age){                     // here function name is constructor
+//         this.studentname = name;
+//         this.studentage  = age;
+//         console.log("Hii Satish this is contructor function");
+//     }
+
+//     Hello(){
+//         console.log(`Hello ${this.studentname} your age is ${this.studentage}`);   // here this keyword reference to the name which defined in Consructor function
+//     }
+
+//     static static_Method(){
+//         console.log("Hii Satish this is Static function");
+//     }  
+
+// }
+// student.static_Method();  // calling to static funtion  OUTPUT ---> Hii Satish this is Static function
+
+
+
+
+
+
+
+
