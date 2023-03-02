@@ -1,0 +1,173 @@
+  index.html
+  
+  
+  
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+ 
+    <title>First React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+ 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+App.js
+
+import logo from './logo.svg';
+import './App.css';
+
+let a = 10;
+let msg = "";
+if (a>5) {
+  msg = "hii" 
+}
+else{
+  msg = "Bye"
+}
+
+// we can't use Conditional Operation inside JSX (we can use only Outside)
+
+function App() {
+  return (
+
+    <>           
+    {/* Fragment --------> <></> (we can wrap multiple line here) */}
+
+    <h2>How are you all</h2>
+    <h1>{(a>5) ? "Hello Satish" : "How are You Satish"}</h1>
+     {/* here we can use  ternary operator it is just as if-else4 */}
+    <h3>{msg}</h3>
+    <div className="App">
+      <h1>Hello You all are welcome in Squad Technology Pvt. Ltd. </h1>
+    </div>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+index.js
+
+
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import User from './User';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+    <User />
+  </React.StrictMode>
+);
+
+ 
+reportWebVitals();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Created Another Folder indise Src
+user.js
+
+
+
+let CompanyName = "Squad Technology Pvt. Ltd."
+const Car_obj = {
+    Name : "Toyota",
+    color : "grey",
+    make : "2022"
+};
+function User() {
+    return (
+      <div className="App">
+       <h1>Satish Singh</h1>
+       <h2>{CompanyName}</h2>  
+       
+        <h3>{10+10}</h3>
+        <p>{Car_obj.Name}</p>      
+        
+        {/*  
+        these all are called JsX Expression
+        its called JsX Expression 
+        */ }
+
+      </div>
+    );
+  }
+  
+  export default User;
+
+  
+
+
+
+
